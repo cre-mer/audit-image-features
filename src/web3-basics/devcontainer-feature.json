@@ -1,0 +1,21 @@
+{
+    "id": "web3-basics",
+    "version": "0.1.0",
+    "name": "Basic Web3 Tools",
+    "description": "Installs solc, solc-select, foundry, hardhat, and vyper.",
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/python": {},
+        "ghcr.io/devcontainers/features/node": {}
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/python",
+        "ghcr.io/devcontainers/features/node"
+    ],
+    "options": {
+        "solidityVersion": {
+            "type": "string",
+            "default": "latest",
+            "description": "Solidity version to install. Use 'latest' for the latest stable version."
+        }
+    }
+}
