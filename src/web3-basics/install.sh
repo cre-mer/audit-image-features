@@ -4,11 +4,9 @@ set -e
 echo "Current user: $(whoami)"
 
 echo "Installing uv, solc-select, and vyper..."
-python3 -m pip install uv --break-system-packages --ignore-installed
+# python3 -m pip install uv --break-system-packages --ignore-installed
 python3 -m pip install solc-select --break-system-packages --ignore-installed
 python3 -m pip install vyper --break-system-packages --ignore-installed
-
-# export PATH="$PATH:/root/.local/bin:$HOME/.local/bin"
 
 su auditor -c "solc-select use ${SOLIDITYVERSION} --always-install"
 

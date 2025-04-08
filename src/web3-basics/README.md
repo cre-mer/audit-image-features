@@ -1,5 +1,4 @@
-
-# My Favorite Color (color)
+# Web3 Basic Tooling
 
 Basic web3 tooling that includes:
 
@@ -13,8 +12,8 @@ Basic web3 tooling that includes:
 
 ```json
 "features": {
-    "ghcr.io/Artifex1/audit-image-features/web3-basics:1": {
-        "version": "latest"
+    "ghcr.io/Artifex1/audit-image-features/web3-basics:latest": {
+        "solidityVersion": "latest"
     }
 }
 ```
