@@ -1,0 +1,10 @@
+{
+    "id": "circom",
+    "version": "0.1.0",
+    "name": "Circom Programming Language",
+    "description": "Installs Circom and snarkjs.",
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/rust": {},
+        "ghcr.io/devcontainers/features/node": {}
+    }
+}
