@@ -1,8 +1,6 @@
 #!/bin/bash
 set -e
 
-echo "Current user: $(whoami)"
-
 echo "Installing uv, solc-select, and vyper..."
 # python3 -m pip install uv --break-system-packages --ignore-installed
 python3 -m pip install solc-select --break-system-packages --ignore-installed
