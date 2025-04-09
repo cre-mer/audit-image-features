@@ -7,6 +7,12 @@
         "ghcr.io/artifex1/audit-image-features/web3-basics:latest": {}
         // add any other features here that are required
     },
+    // some security hardening
+    "runArgs": [
+        "--cap-drop=ALL",
+        "--security-opt=no-new-privileges",
+        "--security-opt=apparmor:docker-default"
+    ],
     // Configure tool-specific properties.
     "customizations": {
         // Configure properties specific to VS Code.
