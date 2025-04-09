@@ -1,0 +1,6 @@
+{
+    "id": "noir",
+    "version": "0.1.0",
+    "name": "Noir Programming Language",
+    "description": "Installs Noir and Barretenberg."
+}
