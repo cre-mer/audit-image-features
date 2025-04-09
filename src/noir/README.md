@@ -1,4 +1,4 @@
-# Web3 Basic Tooling
+# Noir
 
 Install latest Aztec Noir circuits language and Barretenberg prover library.
 
