@@ -7,10 +7,6 @@
         "ghcr.io/devcontainers/features/python": {},
         "ghcr.io/devcontainers/features/node": {}
     },
-    "installsAfter": [
-        "ghcr.io/devcontainers/features/python",
-        "ghcr.io/devcontainers/features/node"
-    ],
     "options": {
         "solidityVersion": {
             "type": "string",
