@@ -1,0 +1,62 @@
+#!/bin/bash
+#
+# dev-template CLI tool
+#
+# Usage:
+#   dev-template apply <destination_folder>
+#       - Creates a .devcontainer folder in the given destination
+#         and copies the internal devcontainer.json template to it.
+#
+#   dev-template update <new_template_path>
+#       - Updates the internal devcontainer.json template with the contents
+#         from the provided file.
+#
+
+# Determine the directory where this script is located
+SCRIPT_DIR="$(dirname "$(realpath "$0")")"
+TEMPLATE_FILE="${SCRIPT_DIR}/devcontainer.json"
+
+usage() {
+    echo "Usage:"
+    echo "  $0 apply <destination_folder>"
+    echo "  $0 update <path_to_new_devcontainer.json>"
+    exit 1
+}
+
+if [ "$#" -ne 2 ]; then
+    usage
+fi
+
+COMMAND="$1"
+ARG="$2"
+
+case "$COMMAND" in
+    apply)
+        # Check if the template file exists first
+        if [ ! -f "$TEMPLATE_FILE" ]; then
+            echo "Error: No template found. Please run 'dev-template update <path>' first."
+            exit 1
+        fi
+        DEST_FOLDER="$ARG"
+        if [ ! -d "$DEST_FOLDER" ]; then
+            echo "Error: Destination folder does not exist: $DEST_FOLDER"
+            exit 1
+        fi
+        TARGET_DIR="${DEST_FOLDER}/.devcontainer"
+        mkdir -p "$TARGET_DIR"
+        cp "$TEMPLATE_FILE" "${TARGET_DIR}/devcontainer.json"
+        echo "Applied template: Created ${TARGET_DIR}/devcontainer.json"
+        ;;
+    update)
+        NEW_TEMPLATE="$ARG"
+        if [ ! -f "$NEW_TEMPLATE" ]; then
+            echo "Error: The new template file does not exist: $NEW_TEMPLATE"
+            exit 1
+        fi
+        cp "$NEW_TEMPLATE" "$TEMPLATE_FILE"
+        echo "Updated internal template with $NEW_TEMPLATE"
+        ;;
+    *)
+        usage
+        ;;
+esac
