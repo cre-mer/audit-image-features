@@ -45,3 +45,4 @@ dev-template update /path/to/new/devcontainer.json
 dev-template apply /path/to/project
 ```
 
+Simply copy the `dev-template` script in a folder that is in PATH and `chmod +x path/to/dev-template`.
