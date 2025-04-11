@@ -4,7 +4,12 @@ set -e
 echo "Installing uv, and web3 python tools..."
 python3 -m pip install uv --break-system-packages --ignore-installed
 
-su auditor -c 'uv tool install slither-analyzer crytic-compile vyper semgrep eth-wake solc-select'
+su auditor -c 'uv tool install slither-analyzer'
+su auditor -c 'uv tool install crytic-compile'
+su auditor -c 'uv tool install vyper'
+su auditor -c 'uv tool install semgrep'
+su auditor -c 'uv tool install eth-wake'
+su auditor -c 'uv tool install solc-select'
 su auditor -c 'uv tool update-shell'
 
 su auditor -c "solc-select use ${SOLIDITYVERSION} --always-install"
