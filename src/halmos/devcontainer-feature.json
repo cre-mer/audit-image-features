@@ -1,0 +1,9 @@
+{
+    "id": "halmos",
+    "version": "0.1.0",
+    "name": "Halmos",
+    "description": "Installs halmos symbolic testing.",
+    "dependsOn": {
+        "ghcr.io/Artifex1/audit-image-features/web3-basics:latest": {}
+    }
+}
