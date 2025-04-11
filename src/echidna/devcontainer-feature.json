@@ -1,0 +1,13 @@
+{
+    "id": "echidna",
+    "version": "0.1.0",
+    "name": "Echidna",
+    "description": "Installs echidna fuzzing tool.",
+    "options": {
+        "version": {
+            "type": "string",
+            "default": "2.2.6",
+            "description": "Echidna version to install. Defaults to version 2.2.6. To be specified without 'v' tag prefix"
+        }
+    }
+}
