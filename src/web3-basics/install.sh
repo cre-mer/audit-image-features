@@ -1,10 +1,11 @@
 #!/bin/bash
 set -e
 
-echo "Installing uv, solc-select, and vyper..."
-# python3 -m pip install uv --break-system-packages --ignore-installed
-python3 -m pip install solc-select --break-system-packages --ignore-installed
-python3 -m pip install vyper --break-system-packages --ignore-installed
+echo "Installing uv, and web3 python tools..."
+python3 -m pip install uv --break-system-packages --ignore-installed
+
+su auditor -c 'uv tool install slither-analyzer crytic-compile vyper semgrep eth-wake solc-select'
+su auditor -c 'uv tool update-shell'
 
 su auditor -c "solc-select use ${SOLIDITYVERSION} --always-install"
 
@@ -14,7 +15,6 @@ su auditor -c 'source /home/auditor/.zshenv'
 su auditor -c 'foundryup'
 
 echo "Installing Hardhat and Hardhat CLI..."
-npm install --global hardhat
-npm install --global hardhat-cli
+npm install --global hardhat hardhat-cli
 
 echo "Basic Web3 tools installed!"
