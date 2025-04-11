@@ -6,9 +6,10 @@ This repository provides a collection of devcontainer features for enhancing dev
 
 For each of the following features, see `src/*/README.md` for details:
 
-- web3 basics
+- Web3 basics
 - Noir circuit language
 - Circom
+- Echidna
 - _more to come_
 
 Additional features will be added to this repository to support a wider range of development workflows.
