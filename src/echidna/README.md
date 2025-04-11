@@ -1,6 +1,6 @@
 # Echidna
 
-Installs Echidna by downloading its binary from the GitHub releases. For available versions, please check the [release tags](https://github.com/crytic/echidna/tags). The version is specified as seen below without the 'v' prefix.
+Installs [Echidna](https://github.com/crytic/echidna/) by downloading its binary from the GitHub releases. For available versions, please check the [release tags](https://github.com/crytic/echidna/tags). The version is specified as seen below without the 'v' prefix.
 
 ## Example Usage
 

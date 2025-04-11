@@ -1,6 +1,6 @@
 # Noir
 
-Install latest Aztec Noir circuits language and Barretenberg prover library.
+Install latest Aztec [Noir](https://noir-lang.org/) circuits language and [Barretenberg](https://github.com/AztecProtocol/barretenberg) prover library.
 
 ## Example Usage
 
