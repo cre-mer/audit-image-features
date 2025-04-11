@@ -1,0 +1,9 @@
+{
+    "id": "medusa",
+    "version": "0.1.0",
+    "name": "Medusa",
+    "description": "Installs medusa fuzzer.",
+    "dependsOn": {
+        "ghcr.io/devcontainers/features/go": {}
+    }
+}
