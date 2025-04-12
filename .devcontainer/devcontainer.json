@@ -7,6 +7,8 @@
         "ghcr.io/cre-mer/audit-image-features/web3-basics:latest": {}
         // add any other features here that are required
     },
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "workspaceFolder": "/workspace", // Should match your project path in-container
     // some security hardening
     "runArgs": [
         "--cap-drop=ALL",
@@ -78,7 +80,7 @@
                         "iconColour": "#118ab2"
                     },
                     "INFO": {
-                        "icon": "lieght-bulb",
+                        "icon": "light-bulb",
                         "type": "text",
                         "foreground": "#fff",
                         "background": "#118ab2",

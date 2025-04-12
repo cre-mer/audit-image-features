@@ -3,6 +3,7 @@ set -e
 source dev-container-features-test-lib
 
 # Check that each tool works
+check "cargo version is printed" cargo --version
 check "solc-select versions are printed" solc-select versions
 check "solc version is printed" solc --version
 check "slither version is printed" slither --version
