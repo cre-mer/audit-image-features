@@ -16,10 +16,10 @@ Additional features will be added to this repository to support a wider range of
 
 ## Base Image
 
-These features are designed to be used with the following [base image](https://github.com/Artifex1/audit-image-base):
+These features are designed to be used with the following [base image](https://github.com/cre-mer/audit-image-base):
 
 ```
-ghcr.io/artifex1/audit-image-base:main
+ghcr.io/cre-mer/audit-image-base:main
 ```
 
 ## Testing
@@ -27,7 +27,7 @@ ghcr.io/artifex1/audit-image-base:main
 You can test the features using the [devcontainer CLI](https://github.com/devcontainers/cli). Run:
 
 ```shell
-devcontainer features test --base-image ghcr.io/artifex1/audit-image-base:main
+devcontainer features test --base-image ghcr.io/cre-mer/audit-image-base:main
 ```
 
 ## Template
