@@ -5,7 +5,8 @@
     "description": "Installs solc, solc-select, foundry, hardhat, and vyper.",
     "dependsOn": {
         "ghcr.io/devcontainers/features/python": {},
-        "ghcr.io/devcontainers/features/node": {}
+        "ghcr.io/devcontainers/features/node": {},
+        "ghcr.io/devcontainers/features/rust": {}
     },
     "options": {
         "solidityVersion": {

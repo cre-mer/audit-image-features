@@ -1,10 +1,10 @@
 {
     "name": "Example Devcontainer with Features",
-    "image": "ghcr.io/artifex1/audit-image-base:main",
+    "image": "ghcr.io/cre-mer/audit-image-base:main",
     // Features to add to the dev container. More info: https://containers.dev/features.
     "features": {
         // the web3 basics feature from this repository
-        "ghcr.io/artifex1/audit-image-features/web3-basics:latest": {}
+        "ghcr.io/cre-mer/audit-image-features/web3-basics:latest": {}
         // add any other features here that are required
     },
     // some security hardening
@@ -31,17 +31,185 @@
                     "zsh": {
                         "path": "/usr/bin/zsh"
                     }
-                }
+                },
                 // add any other vscode settings here
                 // 1. open vscode and the control panel (cmd+shift+p)
                 // 2. search for "Preferences: Open Settings (JSON)"
                 // 3. copy the settings you want to add here
+                "solidity.telemetry": false,
+                "workbench.startupEditor": "none",
+                "editor.stickyScroll.enabled": true,
+                "files.associations": {
+                    "*.iropt": "yul"
+                },
+                "security.workspace.trust.untrustedFiles": "open",
+                "git.openRepositoryInParentFolders": "never",
+                "solidity-va.test.defaultUnittestTemplate": "hardhat",
+                "solidity-va.tools.surya.option.negModifiers": true,
+                "todo-tree.general.tags": [
+                    "PIN",
+                    "INFO",
+                    "QQ",
+                    "SMELL",
+                    "ISSUE",
+                    "ISSUED",
+                    "RAISED",
+                    "OKAY",
+                    "FIXME",
+                    "TODO",
+                    "TOCHECK",
+                    "DOCS"
+                ],
+                "todo-tree.highlights.defaultHighlight": {
+                    "icon": "light-bulb",
+                    "type": "text",
+                    "foreground": "#000",
+                    "background": "#e2e2e2",
+                    "opacity": 70,
+                    "iconColour": "#cfcfcf"
+                },
+                "todo-tree.highlights.customHighlight": {
+                    "PIN": {
+                        "icon": "pin",
+                        "type": "text",
+                        "foreground": "#fff",
+                        "background": "#118ab2",
+                        "opacity": 50,
+                        "iconColour": "#118ab2"
+                    },
+                    "INFO": {
+                        "icon": "lieght-bulb",
+                        "type": "text",
+                        "foreground": "#fff",
+                        "background": "#118ab2",
+                        "opacity": 50,
+                        "iconColour": "#118ab2"
+                    },
+                    "QQ": {
+                        "icon": "question",
+                        "type": "text",
+                        "foreground": "#fff",
+                        "background": "#a711b2",
+                        "opacity": 50,
+                        "iconColour": "#a711b2"
+                    },
+                    "SMELL": {
+                        "icon": "alert",
+                        "type": "text",
+                        "foreground": "#fff",
+                        "background": "#bb9741",
+                        "opacity": 50,
+                        "iconColour": "#bb9741"
+                    },
+                    "ISSUE": {
+                        "icon": "bug",
+                        "type": "text",
+                        "foreground": "#fff",
+                        "background": "#D32F2F",
+                        "opacity": 50,
+                        "iconColour": "#D32F2F"
+                    },
+                    "DOCS": {
+                        "icon": "magnifier",
+                        "type": "text",
+                        "foreground": "#000",
+                        "background": "#f1f52c",
+                        "opacity": 50,
+                        "iconColour": "#f1f52c"
+                    },
+                    "RAISED": {
+                        "icon": "check",
+                        "type": "text",
+                        "foreground": "#fff",
+                        "background": "#2ceb13",
+                        "opacity": 50,
+                        "iconColour": "#2ceb13"
+                    },
+                    "ISSUED": {
+                        "icon": "repo-push",
+                        "type": "text",
+                        "foreground": "#fff",
+                        "background": "#81294e",
+                        "opacity": 50,
+                        "iconColour": "#81294e"
+                    },
+                    "OKAY": {
+                        "icon": "thumbsup",
+                        "type": "text",
+                        "foreground": "#fff",
+                        "background": "#06d6a0",
+                        "opacity": 50,
+                        "iconColour": "#06d6a0"
+                    },
+                    "TOCHECK": {
+                        "icon": "codescan",
+                        "foreground": "#fff",
+                        "background": "#eb7e56",
+                        "opacity": 50,
+                        "iconColour": "#eb7e56"
+                    }
+                },
+                "workbench.iconTheme": "file-icons",
+                "firedbg.showWelcome": false,
+                "diffEditor.renderSideBySide": true,
+                "github.copilot.enable": {
+                    "*": false,
+                    "plaintext": false,
+                    "markdown": false,
+                    "scminput": false
+                },
+                "[typescriptreact]": {
+                    "editor.defaultFormatter": "vscode.typescript-language-features"
+                },
+                "editor.formatOnSave": true,
+                "editor.formatOnPaste": true,
+                "git.blame.editorDecoration.enabled": true,
+                "git.blame.statusBarItem.enabled": false,
+                "editor.unicodeHighlight.invisibleCharacters": false
             },
             "extensions": [
                 // Here goes the list of extensions you want to have available
                 // in the devcontainer. You can get the list of extensions from
                 // the host machine with: code --list-extensions
                 // copy the list here, each extension wrapped in double quotes
+                "asciidoctor.asciidoctor-vscode",
+                "coinfabrik.scout-audit",
+                "contractshark.solidity-lang",
+                "cordx56.rustowl-vscode",
+                "degensean.contract-code-viewer",
+                "docker.docker",
+                "eamodio.gitlens",
+                "esbenp.prettier-vscode",
+                "file-icons.file-icons",
+                "github.copilot",
+                "github.copilot-chat",
+                "golang.go",
+                "gruntfuggly.todo-tree",
+                "iden3.circom",
+                "juanblanco.solidity",
+                "ms-azuretools.vscode-docker",
+                "ms-python.debugpy",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-toolsai.jupyter",
+                "ms-toolsai.jupyter-renderers",
+                "ms-vscode-remote.remote-containers",
+                "nomicfoundation.hardhat-solidity",
+                "openai.openai-chatgpt-adhoc",
+                "rust-lang.rust-analyzer",
+                "seaql.firedbg-rust",
+                "solang.solang",
+                "starkware.cairo",
+                "starkware.cairo1",
+                "tamasfe.even-better-toml",
+                "tintinweb.graphviz-interactive-preview",
+                "tintinweb.solidity-visual-auditor",
+                "tintinweb.vscode-circom-pro",
+                "tintinweb.vscode-ethover",
+                "tintinweb.vscode-inline-bookmarks",
+                "tintinweb.vscode-solidity-language",
+                "usernamehw.errorlens",
+                "vadimcn.vscode-lldb"
             ]
         }
     }

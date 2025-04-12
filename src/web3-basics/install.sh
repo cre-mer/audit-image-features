@@ -21,5 +21,7 @@ su auditor -c 'foundryup'
 
 echo "Installing Hardhat..."
 npm install --global hardhat
+npm install --global hardhat-cli
+npm install --global hardhat-shorthand
 
 echo "Basic Web3 tools installed!"
