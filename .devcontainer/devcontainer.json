@@ -112,7 +112,7 @@
                         "iconColour": "#D32F2F"
                     },
                     "DOCS": {
-                        "icon": "magnifier",
+                        "icon": "book",
                         "type": "text",
                         "foreground": "#000",
                         "background": "#f1f52c",
