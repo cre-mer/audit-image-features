@@ -1,0 +1,9 @@
+{
+  "id": "soroban-tooling",
+  "version": "0.1.0",
+  "name": "Soroban Tools",
+  "description": "Installs cargo-scout-audit.",
+  "dependsOn": {
+    "ghcr.io/devcontainers/features/rust": {}
+  }
+}
